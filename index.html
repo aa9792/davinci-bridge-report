@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>STEAM 達文西橋成果展示</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="presentation-shell">
+      <section class="stage" aria-label="STEAM 達文西橋五分鐘報告">
+        <div class="content-panel">
+          <header class="report-header">
+            <p class="kicker">5 分鐘小組報告 | STEAM</p>
+            <h1>用 STEAM 看達文西橋</h1>
+            <p class="subtitle">從結構原理、材料差異到 M 的承重估算，展示我們如何把橋做出來，也把力算出來。</p>
+          </header>
+
+          <nav class="section-tabs" aria-label="報告段落">
+            <button class="tab is-active" data-section="0" type="button">
+              STEAM
+            </button>
+            <button class="tab" data-section="1" type="button">
+              S / T
+            </button>
+            <button class="tab" data-section="2" type="button">
+              E 比較
+            </button>
+            <button class="tab" data-section="3" type="button">
+              M 承重
+            </button>
+            <button class="tab" data-section="4" type="button">
+              A 心得
+            </button>
+          </nav>
+
+          <article class="talk-card" aria-live="polite">
+            <div class="talk-topline">
+              <p id="section-label">STEAM 總覽</p>
+            </div>
+            <h2 id="section-title">我們用五個角度觀察同一座橋</h2>
+            <ul id="section-points" class="point-list"></ul>
+            <p id="section-note" class="speaker-note"></p>
+          </article>
+        </div>
+
+        <div class="media-panel">
+          <div class="media-toolbar">
+            <p id="mediaCaption">完成的橋樑結構</p>
+            <div class="media-buttons" aria-label="成果媒體">
+              <button class="media-choice is-active" data-media-type="photo" data-media-index="0" type="button">照片</button>
+              <button class="media-choice" data-media-type="video" data-media-index="0" type="button">影片 1</button>
+              <button class="media-choice" data-media-type="video" data-media-index="1" type="button">影片 2</button>
+              <button class="media-choice" data-media-type="video" data-media-index="2" type="button">影片 3</button>
+            </div>
+          </div>
+
+          <div class="media-frame">
+            <img id="mainPhoto" src="小浣熊達文西橋1.jpg" alt="達文西橋完成照片">
+            <video id="mainVideo" controls playsinline preload="metadata" hidden>
+              <source src="彩色冰棒棍影片1.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div id="photoStrip" class="photo-strip" aria-label="照片縮圖"></div>
+        </div>
+      </section>
+
+      <section class="process-band" aria-label="製作流程">
+        <div class="process-copy">
+          <p class="kicker">How to Build</p>
+          <h2>達文西橋怎麼做</h2>
+          <p>這一區可以在報告中直接示範製作流程：先看材料，再依序說明排列、互鎖、調整與測試。</p>
+          <div class="materials-box">
+            <h3>材料與工具</h3>
+            <ul>
+              <li>冰棒棍、竹筷或教具包木條</li>
+              <li>尺、鉛筆、膠帶或橡皮筋</li>
+              <li>需要展示搬動時，可加入釘子或固定件</li>
+              <li>測試承重用的小砝碼、水瓶或書本</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="process-demo">
+          <div class="step-buttons" aria-label="製作步驟">
+            <button class="step-button is-active" data-step="0" type="button">1 材料</button>
+            <button class="step-button" data-step="1" type="button">2 底層</button>
+            <button class="step-button" data-step="2" type="button">3 交錯</button>
+            <button class="step-button" data-step="3" type="button">4 拱形</button>
+            <button class="step-button" data-step="4" type="button">5 調整</button>
+            <button class="step-button" data-step="5" type="button">6 測試</button>
+          </div>
+
+          <div class="step-display">
+            <img id="stepImage" src="彩色冰棒棍1.jpg" alt="製作材料排列">
+            <div class="step-text">
+              <p id="stepNumber">Step 1</p>
+              <h3 id="stepTitle">準備材料，先確認尺寸一致</h3>
+              <p id="stepBody">把木條依長度與厚度整理好，尺寸越一致，後面交錯時越容易保持左右對稱。</p>
+              <strong id="stepTip">報告提示：先說材料差異會影響摩擦力與節點穩定。</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="math-band" aria-label="M 承重估算">
+        <div class="math-copy">
+          <p class="kicker">M | Mathematics</p>
+          <h2>承重不是猜，是用假設算出安全範圍</h2>
+          <p>達文西橋真正受力很複雜，所以報告中使用簡化模型：先量或估單支材料能承受的重量，再乘上有效承重支數與節點效率，最後除以安全係數。</p>
+          <div class="formula-box">
+            <strong>估算承重 kgf = 單支安全承重 x 有效承重支數 x 節點效率 / 安全係數</strong>
+            <span>換算牛頓 N 約為 kgf x 9.8</span>
+          </div>
+        </div>
+
+        <div class="calculator" aria-label="承重估算器">
+          <div class="preset-row">
+            <button class="preset is-active" data-preset="popsicle" type="button">彩色冰棒棍</button>
+            <button class="preset" data-preset="chopstick" type="button">一般竹筷</button>
+            <button class="preset" data-preset="kit" type="button">小浣熊教具包</button>
+          </div>
+
+          <label>
+            單支材料安全承重 kgf
+            <input id="stickStrength" type="number" min="0.1" step="0.1" value="0.8">
+          </label>
+          <label>
+            有效承重支數
+            <input id="activeMembers" type="number" min="1" step="1" value="8">
+          </label>
+          <label>
+            節點效率 0-1
+            <input id="jointEfficiency" type="number" min="0.1" max="1" step="0.05" value="0.55">
+          </label>
+          <label>
+            安全係數
+            <input id="safetyFactor" type="number" min="1" step="0.1" value="2">
+          </label>
+
+          <div class="result-box">
+            <p>估算安全承重</p>
+            <strong id="calculatedLoad">1.76 kgf</strong>
+            <span id="calculatedNewton">約 17.2 N</span>
+          </div>
+          <p id="calcExplanation" class="calc-explanation"></p>
+        </div>
+      </section>
+
+      <section class="compare-band" aria-label="材料比較">
+        <div>
+          <p class="kicker">材料實作比較</p>
+          <h2>同樣是達文西橋，材料會改變組裝策略</h2>
+        </div>
+        <div class="comparison-table" role="table" aria-label="彩色冰棒棍、一般竹筷、小浣熊教具包比較">
+          <div class="table-row table-head" role="row">
+            <div role="columnheader">材料</div>
+            <div role="columnheader">優點</div>
+            <div role="columnheader">限制</div>
+            <div role="columnheader">承重觀察</div>
+          </div>
+          <div class="table-row" role="row">
+            <div role="cell">彩色冰棒棍</div>
+            <div role="cell">扁平、好排列，顏色能分辨不同層次與受力方向。</div>
+            <div role="cell">厚度較薄，長跨距時容易彎曲，節點摩擦力有限。</div>
+            <div role="cell">適合示範原理；承重主要受彎曲與節點滑動限制。</div>
+          </div>
+          <div class="table-row" role="row">
+            <div role="cell">一般竹筷</div>
+            <div role="cell">材料較硬，單支抗彎能力通常比冰棒棍好。</div>
+            <div role="cell">圓形接觸面容易滾動，不易卡準角度，常需要綁線、切槽或膠帶輔助。</div>
+            <div role="cell">單支強度高，但如果節點會滑，整橋承重不一定最高。</div>
+          </div>
+          <div class="table-row" role="row">
+            <div role="cell">小浣熊教具包</div>
+            <div role="cell">尺寸一致、孔位或固定件明確，組裝穩定，適合展示。</div>
+            <div role="cell">因為固定件提高穩定性，和完全無釘的達文西橋原理不完全相同。</div>
+            <div role="cell">節點效率最高，較能把材料強度轉換成整體承重。</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="learning-band" aria-label="STEAM 學習重點">
+        <div>
+          <p class="kicker">我們學會了什麼</p>
+          <h2>做出橋之後，才真正看見力怎麼流動</h2>
+        </div>
+        <div class="learning-grid">
+          <article>
+            <h3>S 科學</h3>
+            <p>重量向下作用，木條透過接觸與摩擦把力傳到兩側支撐點。</p>
+          </article>
+          <article>
+            <h3>T 技術</h3>
+            <p>影片和照片記錄組裝過程，也讓我們回頭檢查哪個節點最容易位移。</p>
+          </article>
+          <article>
+            <h3>E 工程</h3>
+            <p>不同材料需要不同固定策略，設計必須同時考慮強度、穩定和可展示性。</p>
+          </article>
+          <article>
+            <h3>M 數學</h3>
+            <p>用安全係數保守估算承重，比只說「很穩」更有說服力。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div id="lightbox" class="lightbox" hidden>
+      <button id="closeLightbox" class="lightbox-close" type="button" aria-label="關閉">X</button>
+      <img id="lightboxImage" src="" alt="放大的成果照片">
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
