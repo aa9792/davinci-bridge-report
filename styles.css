@@ -270,7 +270,9 @@ h1 {
 .process-band,
 .math-band,
 .compare-band,
-.learning-band {
+.learning-band,
+.reflection-band,
+.members-band {
   display: grid;
   grid-template-columns: minmax(280px, 0.75fr) minmax(420px, 1.25fr);
   gap: clamp(24px, 4vw, 56px);
@@ -294,14 +296,22 @@ h1 {
 }
 
 .compare-band,
-.learning-band {
+.learning-band,
+.reflection-band {
   background: var(--white);
+}
+
+.members-band {
+  background: #203035;
+  color: var(--white);
 }
 
 .process-band h2,
 .math-band h2,
 .compare-band h2,
-.learning-band h2 {
+.learning-band h2,
+.reflection-band h2,
+.members-band h2 {
   margin: 0;
   max-width: 10em;
   font-size: clamp(1.85rem, 3.8vw, 3.55rem);
@@ -574,6 +584,67 @@ h1 {
   line-height: 1.72;
 }
 
+.reflection-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.reflection-grid article {
+  min-height: 190px;
+  padding: 22px;
+  border-radius: 8px;
+  border-left: 5px solid var(--gold);
+  background: #f4f0e7;
+}
+
+.reflection-grid article:nth-child(2) {
+  border-color: var(--teal);
+}
+
+.reflection-grid .wide-card {
+  grid-column: 1 / -1;
+  min-height: auto;
+  border-color: var(--cedar);
+}
+
+.reflection-grid h3 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+}
+
+.reflection-grid p {
+  margin: 0;
+  color: #4b5558;
+  line-height: 1.78;
+}
+
+.member-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.member-list div {
+  display: grid;
+  gap: 6px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.member-list strong {
+  color: var(--gold);
+  font-size: 0.95rem;
+}
+
+.member-list span {
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
 .lightbox {
   position: fixed;
   inset: 0;
@@ -614,7 +685,9 @@ h1 {
   .process-band,
   .math-band,
   .compare-band,
-  .learning-band {
+  .learning-band,
+  .reflection-band,
+  .members-band {
     grid-template-columns: 1fr;
   }
 
@@ -661,7 +734,13 @@ h1 {
 
   .photo-strip,
   .learning-grid,
+  .reflection-grid,
+  .member-list,
   .step-buttons {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reflection-grid .wide-card {
+    grid-column: auto;
   }
 }
