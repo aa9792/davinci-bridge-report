@@ -113,6 +113,16 @@
             <strong>估算承重 kgf = 單支安全承重 x 有效承重支數 x 節點效率 / 安全係數</strong>
             <span>換算牛頓 N 約為 kgf x 9.8</span>
           </div>
+          <div class="source-box">
+            <h3>這些數字怎麼來？</h3>
+            <p>目前的預設值是報告用的保守推估，不是精密實驗數據。真正報告時可以用實測結果替換。</p>
+            <ul>
+              <li><strong>單支安全承重：</strong>可用單支材料架空後慢慢加重，取「開始明顯彎曲前」的重量。</li>
+              <li><strong>有效承重支數：</strong>不是總木條數，而是受力時真的幫忙分擔重量的主要木條。</li>
+              <li><strong>節點效率：</strong>用來扣掉滑動、角度不準、摩擦不足造成的損失。</li>
+              <li><strong>安全係數：</strong>把理論值再打折，避免展示時接近破壞極限。</li>
+            </ul>
+          </div>
         </div>
 
         <div class="calculator" aria-label="承重估算器">

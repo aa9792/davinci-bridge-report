@@ -428,6 +428,34 @@ h1 {
   color: var(--muted);
 }
 
+.source-box {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 18px;
+  border-radius: 8px;
+  background: #fffdfa;
+  border: 1px solid var(--line);
+}
+
+.source-box h3,
+.source-box p {
+  margin: 0;
+}
+
+.source-box p,
+.source-box li {
+  color: #4b5558;
+  line-height: 1.7;
+}
+
+.source-box ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
 .calculator {
   display: grid;
   gap: 14px;

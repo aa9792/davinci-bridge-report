@@ -134,21 +134,21 @@ const presets = {
     activeMembers: 8,
     jointEfficiency: 0.55,
     safetyFactor: 2,
-    explanation: "彩色冰棒棍容易排列與觀察，但材料較薄，節點也可能滑動，所以效率用中低值估算。"
+    explanation: "彩色冰棒棍的預設值是示範用保守推估：材料較薄，節點也可能滑動，所以效率先用中低值。可用實測重量替換。"
   },
   chopstick: {
     stickStrength: 1.4,
     activeMembers: 8,
     jointEfficiency: 0.42,
     safetyFactor: 2.2,
-    explanation: "竹筷單支較硬，但圓形接觸面容易滾動，整橋承重常被節點穩定度限制。"
+    explanation: "竹筷單支較硬，所以單支承重先估高一些；但圓形接觸面容易滾動，節點效率先估低一些。"
   },
   kit: {
     stickStrength: 1.2,
     activeMembers: 10,
     jointEfficiency: 0.78,
     safetyFactor: 2,
-    explanation: "教具包尺寸一致且有固定件，節點效率較高，材料強度比較能轉成整體承重。"
+    explanation: "教具包尺寸一致且有固定件，節點較不會滑動，因此有效承重支數和節點效率先估得較高。"
   }
 };
 
